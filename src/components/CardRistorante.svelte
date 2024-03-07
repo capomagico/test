@@ -6,7 +6,9 @@
 </script>
 
 <div class="card_ristorante">
-	<img class="card_ristorante__img" src={immagine} alt="Copertina del piatto" />
+	<div style="overflow-y: hidden;">
+		<img class="card_ristorante__img" src={immagine} alt="Copertina del piatto" />
+	</div>
 
 	<div class="card_ristorante__desc">
 		<p class="card_ristorante__prezzo">{prezzo}</p>
@@ -20,20 +22,28 @@
 
 <style>
 	.card_ristorante {
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
 		margin-left: 20px;
+		margin-right: 20px;
 		background-color: rgb(255, 233, 180);
 		width: 300px;
 		color: black;
 		font-family: Montserrat;
 		margin-top: 20px;
+		overflow: hidden;
 	}
 
 	.card_ristorante__img {
-		aspect-ratio: 1;
+		aspect-ratio: 5/4;
 		background-color: red;
 		object-fit: cover;
 		width: 100%;
-		margin-bottom: 5px;
+		transition: transform 0.5s ease;
+	}
+
+	.card_ristorante__img:hover {
+		transform: scale(1.5);
 	}
 
 	.card_ristorante__desc {
@@ -43,21 +53,21 @@
 	}
 
 	.card_ristorante__prezzo {
-		font-size: 14px;
+		font-size: 15px;
 		font-weight: 300;
 		margin-bottom: -8px;
 	}
 	.card_ristorante__piatto {
-		font-size: 24px;
+		font-size: 20px;
 		font-weight: 700;
 	}
 
 	.card_ristorante__footer {
-		background-color: black;
+		background-color: rgb(255, 108, 59);
 		font-weight: 500;
 		font-style: italic;
 		color: white;
-		font-size: 15px;
+		font-size: 12px;
 		padding-top: 5px;
 		padding-bottom: 5px;
 		display: flex;

@@ -28,13 +28,18 @@
 
 <svelte:head>
 	<link rel="stylesheet" href="https://unpkg.com/tailwindcss@3.4.1/src/css/preflight.css" />
-</svelte:head>
-
-{#each risto as risto}
-	<CardRistorante
-		immagine={risto.immagine}
-		prezzo={risto.prezzo}
-		piatto={risto.piatto}
-		ristorante={risto.ristorante}
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet"
 	/>
-{/each}
+</svelte:head>
+<div style="display: flex;">
+	{#each risto as risto}
+		<CardRistorante
+			immagine={risto.immagine}
+			prezzo={risto.prezzo}
+			piatto={risto.piatto}
+			ristorante={risto.ristorante}
+		/>
+	{/each}
+</div>
