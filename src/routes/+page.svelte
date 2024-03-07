@@ -33,7 +33,7 @@
 		rel="stylesheet"
 	/>
 </svelte:head>
-<div style="display: flex;">
+<div style="display: flex; ">
 	{#each risto as risto}
 		<CardRistorante
 			immagine={risto.immagine}
