@@ -21,7 +21,7 @@
 <style>
 	.card_ristorante {
 		margin-left: 20px;
-		background-color: lightgray;
+		background-color: rgb(255, 233, 180);
 		width: 300px;
 		color: black;
 		font-family: Montserrat;
