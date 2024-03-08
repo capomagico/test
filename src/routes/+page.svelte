@@ -1,4 +1,6 @@
 <script>
+	import { get_collection } from '$cms';
+	const menu = get_collection('menu');
 	import CardRistorante from '$components/CardRistorante.svelte';
 
 	let risto = [
@@ -33,6 +35,11 @@
 		rel="stylesheet"
 	/>
 </svelte:head>
+
+{#each menu as menu}
+	<p>{menu.titolo}</p>
+{/each}
+
 <div style="display: flex; ">
 	{#each risto as risto}
 		<CardRistorante
